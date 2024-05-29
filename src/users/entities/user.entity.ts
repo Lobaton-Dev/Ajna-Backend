@@ -1,37 +1,37 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id: number
+  id: number;
 
   @Column()
-  full_name: string
+  full_name: string;
 
   @Column({ unique: true })
-  email: string
+  email: string;
 
   @Column()
-  cpf: string
+  cpf: string;
 
   @Column()
-  password: string
+  password: string;
 
   @Column()
-  telephone: string
+  telephone: string;
 
   @Column()
-  cep: string
+  cep: string;
 
   @Column()
-  city: string
+  city: string;
 
   @Column()
-  state: string
+  state: string;
 
   @Column({ default: () => 'CURRENT_TIMESTAMP' })
-  created_at: Date
+  created_at: Date;
 
   @Column({ default: () => 'CURRENT_TIMESTAMP' })
-  updated_at: Date
+  updated_at: Date;
 }
