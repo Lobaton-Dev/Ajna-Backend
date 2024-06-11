@@ -7,6 +7,6 @@ services:
       POSTGRES_PASSWORD: ${DB_PASS}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "5432:5432"
+      - '5432:5432'
     restart: always
-    container_name: backen_store
+    container_name: Ajna-Backend

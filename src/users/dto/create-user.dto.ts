@@ -1,36 +1,45 @@
-import { IsEmail, IsMobilePhone, IsNumberString, IsString, Matches, MaxLength, MinLength } from 'class-validator'
+import {
+  IsDateString,
+  IsEmail,
+  IsMobilePhone,
+  IsNumberString,
+  IsString,
+  Matches,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
 
 export class CreateUserDto {
-
   @IsString()
-  full_name: string
+  full_name: string;
+
+  @IsDateString()
+  birth_date: string;
 
   @IsEmail()
-  email: string
+  email: string;
 
   @IsNumberString()
-  cpf: string
-
+  cpf: string;
 
   @IsString()
   @MinLength(6)
   @MaxLength(50)
-  @Matches(
-    /(?:(?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {
-    message: 'The password must have a Uppercase, lowercase letter and a number'
+  @Matches(/(?:(?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {
+    message:
+      'The password must have a Uppercase, lowercase letter and a number',
   })
-  password: string
+  password: string;
 
-  @IsMobilePhone("pt-BR")
-  telephone: string
+  @IsMobilePhone('pt-BR')
+  telephone: string;
 
   @IsNumberString()
-  cep: string
+  cep: string;
 
   @IsString()
-  city: string
+  city: string;
 
   @IsString()
-  state: string
-
+  state: string;
 }

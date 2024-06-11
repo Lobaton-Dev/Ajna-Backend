@@ -1,12 +1,15 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity('users')
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
   full_name: string;
+
+  @Column({ type: 'date' })
+  birth_date: string;
 
   @Column({ unique: true })
   email: string;
