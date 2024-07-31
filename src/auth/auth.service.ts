@@ -33,6 +33,7 @@ export class AuthService {
 
     const userExist = await this.userRepository.findOne({
       where: { email },
+      select: { email: true, password: true, id: true },
     });
 
     if (!userExist) throw new HttpException('NOT_FOUND', HttpStatus.NOT_FOUND);

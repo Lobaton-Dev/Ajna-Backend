@@ -18,36 +18,12 @@ export class Users1716379588566 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'birth_date',
-            type: 'date',
-          },
-          {
             name: 'email',
             type: 'varchar',
             isUnique: true,
           },
           {
-            name: 'cpf',
-            type: 'varchar',
-          },
-          {
             name: 'password',
-            type: 'varchar',
-          },
-          {
-            name: 'telephone',
-            type: 'varchar',
-          },
-          {
-            name: 'cep',
-            type: 'varchar',
-          },
-          {
-            name: 'city',
-            type: 'varchar',
-          },
-          {
-            name: 'state',
             type: 'varchar',
           },
           {
